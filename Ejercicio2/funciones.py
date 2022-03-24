@@ -17,7 +17,7 @@ class Gato(Mamifero):
     def __init__(self, especie, tipo1, nombre):
         super().__init__(especie, tipo1)
         self.nombre = nombre
-   
+        print("--------------------------")
         print("Especie: " + self.especie)
         print("Clasificación: " + self.tipo1)
         print("Nombre: " + self.nombre)
@@ -27,17 +27,17 @@ class Pollo (Oviparo):
         super().__init__(especie, tipo)
         self.nombre = nombre
         
-    
+        print("--------------------------")
         print("Especie: " + self.especie)
         print("Clasificación: " + self.tipo)
         print("Nombre: " + self.nombre)
 
 class Ornitorrinco(Mamifero, Oviparo):
     def __init__(self, especie, tipo, tipo1, nombre):
-        super().__init__(especie, tipo1)
-        super().__init__(especie, tipo)
+        Mamifero.__init__(especie, tipo1)
+        Oviparo.__init__(especie, tipo)
         self.nombre = nombre
-    def descripcion(self):
+        print("--------------------------")
         print("Especie: " + self.especie)
         print("Clasificación: " + self.tipo + " y " + self.tipo1)
         print("Nombre: " + self.nombre)
@@ -45,8 +45,7 @@ class Ornitorrinco(Mamifero, Oviparo):
 pollo = Pollo("animal", "oviparo", "pollo")
 
 
-#gato = Gato("animal", "mamifero", "gato")
-#gato.descripcion
+gato = Gato("animal", "mamifero", "gato")
 
-#ornitorrinco = Ornitorrinco("animal", "oviparo", "mamifero", "ornitorrinco")
-#ornitorrinco.descripcion
+
+ornitorrinco = Ornitorrinco("animal", "oviparo", "mamifero", "ornitorrinco")
