@@ -5,14 +5,14 @@ class Cuenta:
         self.fecha = fecha
         self.numero = numero
         self.saldo = saldo
-    def retirar(self):
-        print("¿Cuánto dinero quiere retirar?")
-        ret = float(input())
-        if ret >= self.saldo:
+        
+    def retirar(self, ret1):
+
+        if ret1 >= self.saldo:
             print("No puede retirar esta cantidad de dinero")
         else:
-            print("Has retirado esta cantidad de dinero " + ret + " este día " + self.fecha)
-            self.saldo = self.saldo - ret
+            print("Has retirado esta cantidad de dinero " + str(ret1) + " el día " + str(self.fecha))
+            self.saldo = self.saldo - ret1
             return self.saldo
 print("¿Cuál es su ID?")
 id = input()
@@ -23,8 +23,11 @@ fe = input()
 print("Número de la cuenta:")
 num = input()
 print("Saldo de la cuenta:")
-sal = input()
+sal = float(input())
 
 cuenta = Cuenta (id, nom, fe, num, sal)
-cuenta.retirar
+print("¿Cuánto dinero quiere retirar?")
+ret = float(input())
+print(cuenta.retirar(ret))
+
 
