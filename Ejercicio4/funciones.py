@@ -23,7 +23,8 @@ class Cuenta:
             print("Has transferido esta cantidad de dinero " + str(trans1) + " el día " + str(self.fecha))
             self.saldo = self.saldo - trans1
             return self.saldo      
-        
+ 
+#Información del usuario       
 print("¿Cuál es su ID?")
 id = input()
 print("Nombre del titular:")
@@ -36,6 +37,8 @@ print("Saldo de la cuenta:")
 sal = float(input())
 
 cuenta = Cuenta (id, nom, fe, num, sal)
+
+#Operaciones en la cuenta
 print("¿Quieres hacer alguna operación? transferir/retirar")
 usuario = input()
 if usuario == "retirar":
@@ -49,6 +52,6 @@ elif usuario == "transferir":
     usuario = input()
     print(cuenta.transferir(trans))
 else:
-    raise Exception("esa operación no está disponible")
+    raise Exception("Esa operación no está disponible")
 
 
