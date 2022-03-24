@@ -6,4 +6,17 @@ class Cuenta:
         self.numero = numero
         self.saldo = saldo
         
-print()
+print("¿Cuál es su ID?")
+id = input()
+print("Nombre del titular:")
+nom = input()
+print("Fecha:")
+fe = input()
+print("Número de la cuenta:")
+num = input()
+print("Saldo de la cuenta:")
+sal = input()
+
+cuenta = Cuenta (id, nom, fe, num, sal)
+
+
