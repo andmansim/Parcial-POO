@@ -16,8 +16,8 @@ aut = input()
 print("¿De qué género es?")
 gen = input()
 print("¿Cuál es el isbn?")
-isbn = input()
+isbn = input() 
 
 libro = Libro(tit, aut, isbn, gen)
 
-print(libro)
+libro.descripcion
