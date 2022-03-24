@@ -24,5 +24,11 @@ class Vip:
             print("Has transferido esta cantidad de dinero " + str(trans1) + " el día " + str(self.fecha))
             self.saldo = self.saldo - trans1
             return self.saldo  
+    
+    def ingresar(self, ing):
+
+        print("Has ingresado esta cantidad de dinero " + str(ing) + " el día " + str(self.fecha))
+        self.saldo = self.saldo + ing
+        return self.saldo
         
         
