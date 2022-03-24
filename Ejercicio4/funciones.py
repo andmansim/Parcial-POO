@@ -5,3 +5,9 @@ class Libro:
         self.titulo = titulo
         self.isbn = isbn
         self.genero = genero
+
+print("Elija el nombre del libro a buscar:")
+nomb = input()
+print("¿Quién es el autor del libro?")
+aut = input()
+libro = Libro(nomb, aut)
