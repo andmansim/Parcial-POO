@@ -1,4 +1,3 @@
-import funciones
 class Vip:
         
     def __init__(self, ID, nombre, fecha, numero, saldo, saldo_negativo):
@@ -7,11 +6,11 @@ class Vip:
         self.fecha = fecha
         self.numero = numero
         self.saldo = saldo
-        self.saldo_negarivo = saldo_negativo
+        self.saldo_negativo = saldo_negativo
         
     def retirar(self, ret1):
 
-        if ret1 >= self.saldo:
+        if ret1 < self.saldo_negativo:
             print("No puede retirar esta cantidad de dinero")
         else:
             print("Has retirado esta cantidad de dinero " + str(ret1) + " el día " + str(self.fecha))
@@ -19,10 +18,9 @@ class Vip:
             return self.saldo
     
     def transferir(self, trans1):
-        if trans1 >= self.saldo:
+        if trans1 < self.saldo_negativo:
             print("No puede transferir esta cantidad de dinero")
         else:
-
             print("Has transferido esta cantidad de dinero " + str(trans1) + " el día " + str(self.fecha))
             self.saldo = self.saldo - trans1
             return self.saldo  

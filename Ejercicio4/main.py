@@ -1,5 +1,6 @@
 import funciones
 import vip
+import random
 
 if __name__ == "__main__":
 
@@ -11,10 +12,13 @@ if __name__ == "__main__":
     nom = input()
 
     print("Fecha:")
-    fe = input()
+    fe = random.randint()
     
     print("Número de la cuenta:")
-    num = input()
+    num = []
+    while len(num) == 12:
+        a = random.randint(0, 9)
+        num.append(a)
      
     print("Saldo de la cuenta:")
     sal = input()
