@@ -14,6 +14,16 @@ class Cuenta:
             print("Has retirado esta cantidad de dinero " + str(ret1) + " el día " + str(self.fecha))
             self.saldo = self.saldo - ret1
             return self.saldo
+    
+    def transferir(self, trans1):
+        if trans1 >= self.saldo:
+            print("No puede transferir esta cantidad de dinero")
+        else:
+
+            print("Has transferido esta cantidad de dinero " + str(trans1) + " el día " + str(self.fecha))
+            self.saldo = self.saldo - trans1
+            return self.saldo      
+        
 print("¿Cuál es su ID?")
 id = input()
 print("Nombre del titular:")
@@ -29,5 +39,11 @@ cuenta = Cuenta (id, nom, fe, num, sal)
 print("¿Cuánto dinero quiere retirar?")
 ret = float(input())
 print(cuenta.retirar(ret))
+
+print("¿Cuánto dinero quiere transferir?")
+trans = float(input())
+print("¿A quién lo quiere transferir?")
+usuario = input()
+print(cuenta.transferir(trans))
 
 
