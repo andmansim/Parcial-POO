@@ -1,13 +1,17 @@
 class Libro:
-    def __init__(self, nombre, autor, titulo, isbn, genero ):
-        self.nombre = nombre
+    def __init__(self, titulo, autor, isbn, genero ):
         self.autor = autor
         self.titulo = titulo
         self.isbn = isbn
         self.genero = genero
 
 print("Elija el nombre del libro a buscar:")
-nomb = input()
+tit = input()
 print("¿Quién es el autor del libro?")
 aut = input()
-libro = Libro(nomb, aut)
+print("¿De qué género es?")
+gen = input()
+print("¿Cuál es el isbn?")
+isbn = input()
+
+libro = Libro(tit, aut, isbn, gen)
