@@ -36,14 +36,19 @@ print("Saldo de la cuenta:")
 sal = float(input())
 
 cuenta = Cuenta (id, nom, fe, num, sal)
-print("¿Cuánto dinero quiere retirar?")
-ret = float(input())
-print(cuenta.retirar(ret))
-
-print("¿Cuánto dinero quiere transferir?")
-trans = float(input())
-print("¿A quién lo quiere transferir?")
+print("¿Quieres hacer alguna operación? transferir/retirar")
 usuario = input()
-print(cuenta.transferir(trans))
+if usuario == "retirar":
+    print("¿Cuánto dinero quiere retirar?")
+    ret = float(input())
+    print(cuenta.retirar(ret))
+elif usuario == "transferir":
+    print("¿Cuánto dinero quiere transferir?")
+    trans = float(input())
+    print("¿A quién lo quiere transferir?")
+    usuario = input()
+    print(cuenta.transferir(trans))
+else:
+    raise Exception("esa operación no está disponible")
 
 
