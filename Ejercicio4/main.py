@@ -34,3 +34,6 @@ if __name__ == "__main__":
         print(cuenta.transferir(trans))
     else:
         raise Exception("Esa operación no está disponible")
+
+    #Cuenta Vip
+    vip = funciones.Vip(id, nom, fe, num, sal,-1000)
