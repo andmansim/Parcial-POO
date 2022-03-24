@@ -1,4 +1,5 @@
 import funciones
+import vip
 
 if __name__ == "__main__":
     #Información del usuario       
@@ -36,4 +37,4 @@ if __name__ == "__main__":
         raise Exception("Esa operación no está disponible")
 
     #Cuenta Vip
-    vip = funciones.Vip(id, nom, fe, num, sal,-1000)
+    v = vip.Vip(id, nom, fe, num, sal,-1000)
